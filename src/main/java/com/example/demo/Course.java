@@ -28,6 +28,15 @@ public class Course {
     @NotNull
     private int credit;
 
+    public Course() {
+    }
+
+    public Course(@NotNull @Size(min = 4) String title, @NotNull @Size(min = 3) String instructor, @NotNull @Size(min = 5) String description, @NotNull int credit) {
+        this.title = title;
+        this.instructor = instructor;
+        this.description = description;
+        this.credit = credit;
+    }
 
     public long getId() {
         return id;
